@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shake n Bake Racing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cyan: #00e5ff;
+            --pink: #ff007f;
+            --dark-bg: #1a1a1a;
+            --card-bg: #222222;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-bg);
+            color: white;
+            margin: 0;
+            padding: 0;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        header {
+			background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.2)), url('car-hero-image.png') no-repeat center center;
+			background-size: cover;
+			/* Reduced top padding to move text up, kept bottom padding for height */
+			padding: 40px 0 400px 0; 
+			text-align: center;
+			border-bottom: 3px solid var(--cyan);
+		}
+
+        .logo-container {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+        }
+
+        .logo-container img {
+            width: 400px;
+        }
+
+        nav {
+			display: none;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        nav a.config {
+            background-color: var(--cyan);
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        h1 {
+			font-size: 4em;
+			font-weight: 900;
+			/* Ensure no top margin is pushing the text down */
+			margin: 0; 
+			color: var(--cyan);
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+		}
+
+        .tagline {
+            font-size: 1.2em;
+            margin-top: 10px;
+            letter-spacing: 2px;
+        }
+
+        main {
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .section {
+			flex: 1 1 100%; /* Makes the section take the full horizontal width */
+		}
+
+        h2 {
+            font-size: 1.8em;
+            color: var(--cyan);
+            margin-bottom: 20px;
+        }
+
+        /* Container now rows instead of columns */
+		.card-container {
+			display: flex;
+			flex-direction: row; /* Aligns them horizontally */
+			flex-wrap: wrap;     /* Allows them to wrap to the next line */
+			justify-content: center; /* Centers the cards in the section */
+			gap: 20px;
+		}
+
+		/* Card now has a max-width and grows to fill space */
+		.card {
+			background-color: var(--card-bg);
+			border: 2px solid var(--pink);
+			padding: 20px;
+			border-radius: 10px;
+			position: relative;
+			
+			/* Horizontal alignment settings */
+			flex: 1 1 300px;    /* Grow and shrink, with a base of 300px */
+			max-width: 350px;   /* The maximum width you requested */
+		}
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .driver-name, .partner-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--cyan);
+        }
+
+        .helmet-icon {
+            font-size: 2em;
+            color: var(--cyan);
+        }
+
+        .irating {
+            font-size: 0.9em;
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+
+        .logos {
+            display: flex;
+            gap: 15px;
+            opacity: 0.7;
+        }
+
+        .logos img {
+            height: 20px;
+            filter: grayscale(100%) brightness(200%);
+        }
+
+        .join-cta {
+			background-color: var(--pink);
+			padding: 30px;
+			border-radius: 10px;
+			text-align: center;
+			margin-top: 40px;
+
+			/* Centering and sizing logic */
+			max-width: 500px;  /* Adjust this value to your preferred width */
+			margin-left: auto; /* Pushes element from the left */
+			margin-right: auto;/* Pushes element from the right */
+		}
+
+        .join-cta h2 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .join-cta p {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .discord-btn {
+            background-color: var(--cyan);
+            color: black;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.8em;
+            color: #aaa;
+            position: relative;
+        }
+
+        footer img {
+            width: 50px;
+            vertical-align: middle;
+            margin: 0 10px;
+        }
+        
+        .footer-logo {
+             position: absolute;
+             bottom: 20px;
+             right: 20px;
+             width: 30px;
+             opacity: 0.5;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="logo-container">
+    <img src="snb-logo-transparent.png" alt="Shake n Bake Racing Logo">
+</div>
+
+<nav>
+    <a href="#">Haller</a>
+    <a href="#">Solou</a>
+    <a href="#">Doerrttou</a>
+    <a href="#">Angst</a>
+    <a href="#" class="config">Config</a>
+</nav>
+
+<header>
+    <!--<h1>Shake n Bake Racing</h1>
+    <p class="tagline">Hell. Yeah. Brother.</p>-->
+</header>
+
+<main>
+    <section class="section">
+        <h2>The Drivers</h2>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-header">
+                    <div class="driver-name">Chris<br>Stewart</div>
+                    <div class="helmet-icon"><img src="helmet.jpg" alt="Helmet"></div>
+                </div>
+                <div class="irating">iRating 9F1028</div>
+                <div class="logos">
+                    <img src="https://via.placeholder.com/50x20" alt="Logo 1">
+                    <img src="https://via.placeholder.com/50x20" alt="Logo 2">
+                    <img src="https://via.placeholder.com/50x20" alt="Logo 3">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="driver-name">Peter<br>Nodwell</div>
+                    <div class="helmet-icon"><img src="helmet.jpg" alt="Helmet"></div>
+                </div>
+                <div class="irating">iRating 9F1028</div>
+                <div class="logos">
+                    <img src="https://via.placeholder.com/50x20" alt="Logo 1">
+                    <img src="https://via.placeholder.com/50x20" alt="Logo 2">
+                    <img src="https://via.placeholder.com/50x20" alt="Logo 3">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="driver-name">Nick<br>Mazza</div>
+                    <div class="helmet-icon"><img src="helmet.jpg" alt="Helmet"></div>
+                </div>
+                <div class="irating">iRating 9F1028</div>
+                <div class="logos">
+                    <img src="https://via.placeholder.com/50x20" alt="Logo 1">
+                    <img src="https://via.placeholder.com/50x20" alt="Logo 2">
+                    <img src="https://via.placeholder.com/50x20" alt="Logo 3">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="driver-name">Collin<br>Bourdon</div>
+                    <div class="helmet-icon"><img src="helmet.jpg" alt="Helmet"></div>
+                </div>
+                <div class="irating">iRating 9F1028</div>
+                <div class="logos">
+                    <img src="https://via.placeholder.com/50x20" alt="Logo 1">
+                    <img src="https://via.placeholder.com/50x20" alt="Logo 2">
+                    <img src="https://via.placeholder.com/50x20" alt="Logo 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 style="display: none;">Our Partners</h2>
+        <div class="card-container" style="display: none;">
+            <div class="card">
+                <div class="card-header">
+                    <div class="partner-name">Rajhani<br>Bake</div>
+                    <div class="helmet-icon">⛑️</div>
+                </div>
+                <div class="irating">iRating 9711SS</div>
+                <div class="logos">
+                    <img src="https://via.placeholder.com/50x20" alt="Logo 4">
+                    <img src="https://via.placeholder.com/50x20" alt="Logo 5">
+                    <img src="https://via.placeholder.com/50x20" alt="Logo 6">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="partner-name">Contange<br>Bano</div>
+                    <div class="helmet-icon">⛑️</div>
+                </div>
+                <div class="irating">iRating 9F1215</div>
+                <div class="logos">
+                    <img src="https://via.placeholder.com/50x20" alt="Logo 7">
+                    <img src="https://via.placeholder.com/50x20" alt="Logo 8">
+                    <img src="https://via.placeholder.com/50x20" alt="Logo 9">
+                </div>
+            </div>
+        </div>
+        <div class="join-cta">
+            <h2>Join the Grid</h2>
+            <p>team@yourdomain.com</p>
+            <a href="#" class="discord-btn">JOIN OUR DISCORD</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    Copyright © 2026 Shake n Bake Racing <img src="image_2.png" alt="Shake n Bake Racing Logo"> copyright@yourdomain.com
+    <img src="https://via.placeholder.com/30" class="footer-logo" alt="Footer Logo">
+</footer>
+
+</body>
+</html>
