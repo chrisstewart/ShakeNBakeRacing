@@ -248,6 +248,15 @@ footer img {
     border-bottom: 2px solid var(--pink);
 }
 
+.race-results-table a {
+    color: white;
+    text-decoration: underline;
+}
+
+.race-results-table a:visited {
+    color: white;
+}
+
 .year-group {
     margin-bottom: 40px;
 }
