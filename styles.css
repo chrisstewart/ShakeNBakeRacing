@@ -1,0 +1,262 @@
+:root {
+    --cyan: #00e5ff;
+    --pink: #ff007f;
+    --dark-bg: #1a1a1a;
+    --card-bg: #222222;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--dark-bg);
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.2)), url('car-hero-image.png') no-repeat center center;
+    background-size: cover;
+    /* Reduced top padding to move text up, kept bottom padding for height */
+    padding: 40px 0 400px 0; 
+    text-align: center;
+    border-bottom: 3px solid var(--cyan);
+}
+
+.logo-container {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo-container img {
+    width: 400px;
+}
+
+nav {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav a.config {
+    background-color: var(--cyan);
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: 900;
+    /* Ensure no top margin is pushing the text down */
+    margin: 0; 
+    color: var(--cyan);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.tagline {
+    font-size: 1.2em;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+main {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.section {
+    flex: 1 1 100%; /* Makes the section take the full horizontal width */
+}
+
+h2 {
+    font-size: 1.8em;
+    color: var(--cyan);
+    margin-bottom: 20px;
+}
+
+/* Container now rows instead of columns */
+.card-container {
+    display: flex;
+    flex-direction: row; /* Aligns them horizontally */
+    flex-wrap: wrap;     /* Allows them to wrap to the next line */
+    justify-content: center; /* Centers the cards in the section */
+    gap: 20px;
+}
+
+/* Card now has a max-width and grows to fill space */
+.card {
+    background-color: var(--card-bg);
+    border: 2px solid var(--pink);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    
+    /* Horizontal alignment settings */
+    flex: 1 1 300px;    /* Grow and shrink, with a base of 300px */
+    max-width: 350px;   /* The maximum width you requested */
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.driver-name, .partner-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--cyan);
+}
+
+.helmet-icon {
+    font-size: 2em;
+    color: var(--cyan);
+}
+
+.irating {
+    font-size: 0.9em;
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+.logos {
+    display: flex;
+    gap: 15px;
+    opacity: 0.7;
+}
+
+.logos img {
+    height: 20px;
+    filter: grayscale(100%) brightness(200%);
+}
+
+.logos a {
+    color: white;
+    text-decoration: underline;
+}
+
+.logos a:visited {
+    color: white;
+}
+
+.join-cta {
+    background-color: var(--pink);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 40px;
+
+    /* Centering and sizing logic */
+    max-width: 500px;  /* Adjust this value to your preferred width */
+    margin-left: auto; /* Pushes element from the left */
+    margin-right: auto;/* Pushes element from the right */
+}
+
+.join-cta h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.join-cta p {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.discord-btn {
+    background-color: var(--cyan);
+    color: black;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.8em;
+    color: #aaa;
+    position: relative;
+}
+
+footer img {
+    width: 50px;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.footer-logo {
+     position: absolute;
+     bottom: 20px;
+     right: 20px;
+     width: 30px;
+     opacity: 0.5;
+}
+
+.race-results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.race-results-table thead {
+    background-color: var(--card-bg);
+    border-bottom: 2px solid var(--pink);
+}
+
+.race-results-table th {
+    color: var(--cyan);
+    padding: 15px;
+    text-align: left;
+    font-weight: 700;
+}
+
+.race-results-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #333;
+}
+
+.race-results-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.race-results-table tbody tr:hover {
+    background-color: var(--card-bg);
+}
+
+.race-results-table tbody tr:last-child td {
+    border-bottom: 2px solid var(--pink);
+}
+
+.year-group {
+    margin-bottom: 40px;
+}
+
+.year-heading {
+    font-size: 1.4em;
+    color: var(--pink);
+    margin-bottom: 15px;
+    border-left: 4px solid var(--cyan);
+    padding-left: 10px;
+    font-weight: 700;
+}
