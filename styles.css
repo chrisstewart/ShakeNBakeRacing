@@ -257,6 +257,14 @@ footer img {
     color: white;
 }
 
+.race-results-table a:hover {
+    color: white;
+}
+
+.race-results-table a:active {
+    color: white;
+}
+
 .year-group {
     margin-bottom: 40px;
 }
