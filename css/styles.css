@@ -18,7 +18,7 @@ body {
 }
 
 header {
-    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.2)), url('car-hero-image.png') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.2)), url('../assets/img/car-hero-image.png') no-repeat center center;
     background-size: cover;
     /* Reduced top padding to move text up, kept bottom padding for height */
     padding: 40px 0 400px 0; 
