@@ -1,10 +1,14 @@
+<script>
+    import { assets } from '$app/paths';
+</script>
+
 <section class="section">
     <h2>The Drivers</h2>
     <div class="card-container">
         <div class="card">
             <div class="card-header">
                 <div class="driver-name">Chris<br>Stewart</div>
-                <div class="helmet-icon"><img src="/src/lib/assets/helmet.jpg" alt="Helmet"></div>
+                <div class="helmet-icon"><img src="{assets}/helmet.jpg" alt="Helmet"></div>
             </div>
             <div class="logos">
                 <a href="https://youtube.com/@ChrisStewartTV" target="_blank">youtube.com/@ChrisStewartTV</a>
@@ -13,7 +17,7 @@
         <div class="card">
             <div class="card-header">
                 <div class="driver-name">Peter<br>Nodwell</div>
-                <div class="helmet-icon"><img src="/src/lib/assets/helmet.jpg" alt="Helmet"></div>
+                <div class="helmet-icon"><img src="{assets}/helmet.jpg" alt="Helmet"></div>
             </div>
             <div class="logos">
                 <a href="https://youtube.com/@SDReSports73" target="_blank">youtube.com/@SDReSports73</a>
@@ -22,7 +26,7 @@
         <div class="card">
             <div class="card-header">
                 <div class="driver-name">Nick<br>Mazza</div>
-                <div class="helmet-icon"><img src="/src/lib/assets/helmet.jpg" alt="Helmet"></div>
+                <div class="helmet-icon"><img src="{assets}/helmet.jpg" alt="Helmet"></div>
             </div>
             <div class="logos">
                 <a href="https://youtube.com/@NickMazza_3" target="_blank">youtube.com/@NickMazza_3</a>
@@ -31,7 +35,7 @@
         <div class="card">
             <div class="card-header">
                 <div class="driver-name">Collin<br>Bourdon</div>
-                <div class="helmet-icon"><img src="/src/lib/assets/helmet.jpg" alt="Helmet"></div>
+                <div class="helmet-icon"><img src="{assets}/helmet.jpg" alt="Helmet"></div>
             </div>
         </div>
     </div>
@@ -105,6 +109,6 @@
     <div class="join-cta">
         <h2>Join the Grid</h2>
         <p>team@yourdomain.com</p>
-        <a href="#" class="discord-btn">JOIN OUR DISCORD</a>
+        <a href="https://discord.com" target="_blank" class="discord-btn">JOIN OUR DISCORD</a>
     </div>
 </section>
