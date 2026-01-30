@@ -24,7 +24,9 @@ jobs:
         run: npm i
 
       - name: build
-        env: BASE_PATH: '/${{ github.event.repository.name }}'
+        env:
+          # Set to '/<repo_name>' (e.g., '/ShakeNBakeRacing') if NOT using a custom domain
+          BASE_PATH: ''
         run: npm run build
 
       - name: Upload Artifacts
