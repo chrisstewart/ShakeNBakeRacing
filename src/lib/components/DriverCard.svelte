@@ -1,6 +1,4 @@
 <script lang="ts">
-	import helmet from '$lib/assets/helmet.jpg';
-
 	interface Props {
 		name: string;
 		link?: string;
@@ -15,7 +13,7 @@
 		<div class="driver-name">
 			{@html name.replace(' ', '<br>')}
 		</div>
-		<div class="helmet-icon"><img src="{helmet}" alt="Helmet" /></div>
+		<div class="helmet-icon"><img src="helmet.jpg" alt="Helmet" /></div>
 	</div>
 	{#if link}
 		<div class="logos">
