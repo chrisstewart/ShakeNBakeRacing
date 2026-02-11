@@ -1,11 +1,11 @@
 <script lang="ts">
-	import '../lib/assets/styles.css';
-	import { assets } from '$app/paths';
+	import '$lib/assets/styles.css';
+	import logo from '$lib/assets/snb-logo-transparent-50-percent-scale.png';
 	let { children } = $props();
 </script>
 
 <div class="logo-container">
-	<img src="{assets}/snb-logo-transparent.png" alt="Shake n Bake Racing Logo" />
+	<img src="{logo}" alt="Shake n Bake Racing Logo" />
 </div>
 
 <header>

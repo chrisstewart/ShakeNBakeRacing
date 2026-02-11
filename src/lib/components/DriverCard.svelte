@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { assets } from '$app/paths';
+	import helmet from '$lib/assets/helmet.jpg';
 
 	interface Props {
 		name: string;
@@ -15,7 +15,7 @@
 		<div class="driver-name">
 			{@html name.replace(' ', '<br>')}
 		</div>
-		<div class="helmet-icon"><img src="{assets}/helmet.jpg" alt="Helmet" /></div>
+		<div class="helmet-icon"><img src="{helmet}" alt="Helmet" /></div>
 	</div>
 	{#if link}
 		<div class="logos">

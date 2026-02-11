@@ -22,7 +22,11 @@
 			link="https://youtube.com/@NickMazza_3"
 			linkText="youtube.com/@NickMazza_3"
 		/>
-		<DriverCard name="Collin Bourdon" link="" linkText="" />
+		<DriverCard 
+			name="Collin Bourdon" 
+			link="" 
+			linkText=""
+		/>
 	</div>
 </section>
 
