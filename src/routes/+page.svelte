@@ -1,5 +1,4 @@
 <script>
-	import { assets } from '$app/paths';
 	import DriverCard from '$lib/components/DriverCard.svelte';
 	import RaceResultsTable from '$lib/components/RaceResultsTable.svelte';
 	import { results2025, results2026 } from '$lib/data/raceResults';
