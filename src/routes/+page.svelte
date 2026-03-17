@@ -30,12 +30,12 @@
 	</div>
 </section>
 
-<section class="section">
+<!--<section class="section">
 	<h2>Race Results</h2>
 
 	<RaceResultsTable year="2026" results={results2026} />
 	<RaceResultsTable year="2025" results={results2025} />
-</section>
+</section>-->
 
 <section class="section" style="display: none;">
 	<div class="join-cta">
